@@ -51,12 +51,12 @@
 
 <div class="jumbotron text-center">
   <h1>Evaluate and communicate business requirements</h1> 
-  <p style="color: darkolivegreen;">This site powered by Yesid Giron -70403 in 2013</p> 
+  <p style="color: lime;">This site powered by 70403</p> 
   <div class="form-group row">
     <div class="col-xs-3"> 
     </div>
     <div class="col-xs-6">
-        <form name="submit">
+        <form name="submit-to-google-sheet">
             <div class="input-group">
               <input type="email" name="Email" class="form-control" size="50" placeholder="Email Address" required>
               <div class="input-group-btn">
@@ -64,7 +64,8 @@
                 <span class="glyphicon glyphicon-envelope"></span>&nbsp;Subscribe</button>
               </div>
             </div>
-        </form><span id="msg"></span>
+        </form>
+        <span id="msg"></span>
     </div>
     <div class="col-xs-3">     
     </div>
@@ -77,28 +78,30 @@
     <div class="col-sm-8">   
       <h2>Evaluate and communicate business requirements</h2>
       <ul>
-        <!-- <li style="display: inline">
+        <li style="display: inline">
         One: Key Information ||       
         <li style="display: inline">
         Two: Support Area||
         </li>
         <li style="display: inline">
          Three: Analysis and Report 
-        </li> -->
+        </li>
       </ul>
       <ul>
         <li style="display: inline">
-          <a href="/ecbr/download/12345_Evaluate and Communicate Biz Req_Assessment.docx" download>Download and View My Assessment </a>  &nbsp;||&nbsp;
-          <a href="https://docs.google.com/spreadsheets/d/13rUo-v00_Kwzog52Qvf1s5pXfYIoyd1M-XWGWkODEpg/edit#gid=0" target="_blank">View Subscribe Details</a>  
-          &nbsp;||&nbsp;
-          <a href="https://docs.google.com/spreadsheets/d/13rUo-v00_Kwzog52Qvf1s5pXfYIoyd1M-XWGWkODEpg/edit#gid=449557844" target="_blank">View Contact Details</a>  
+          <a href="/ecbr/download/12345_Evaluate and Communicate Biz Req_Assessment.docx" download>
+            Download and View My Assessment </a>  &nbsp;||&nbsp;
+          <a href="https://docs.google.com/spreadsheets/d/13rUo-v00_Kwzog52Qvf1s5pXfYIoyd1M-XWGWkODEpg/edit#gid=0" 
+          target="_blank">View Contact or Subscribe Details</a>  &nbsp;||&nbsp;
+          <a href="https://docs.google.com/spreadsheets/d/13rUo-v00_Kwzog52Qvf1s5pXfYIoyd1M-XWGWkODEpg/edit#gid=2049429170" 
+          target="_blank">Feedback Review</a>     
         </li>
       
         
 
       </ul>    
       
-      <img src="images/frame.png" alt="scan by your phone" style="float: left; margin-top: -5px;" id="hideme" />  
+      <img src="images/frame.png" alt="scan by your phone" style="float: left; margin-top: -25px;" id="hideme" />  
       <p>
       <b>ICTICT523</b><br />
         Gather data to identify business requirements <br /><br />
@@ -208,7 +211,7 @@
     <div id="menu2" class="tab-pane fade">
       <h3>Using feedback form by Google sheet to get data</h3>
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <br><a href="https://forms.gle/ymQvsjmGSew8es3u6" target="blank" class="btn btn-default btn-lg">
+      <br><a href="https://forms.gle/D9YACDEyUCi2pTAC8" target="blank" class="btn btn-default btn-lg">
         Fill the Feedback Form &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></a><br />
       <br><a href="https://docs.google.com/spreadsheets/d/13rUo-v00_Kwzog52Qvf1s5pXfYIoyd1M-XWGWkODEpg/edit?usp=sharing" class="btn btn-default btn-lg">
         View the Feedback Result</button></a><br>     
@@ -597,11 +600,11 @@
 <!-- Load external JavaScript -->
 <script src="scripts.js"></script>
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzA6aliPxo5-HBDwiKx3O4FsQCBG15gwKfkERJQAa_rohVwMmfEn5u4mO-PHkzaz1MYBQ/exec'
-  const form = document.forms['Submit-to-google-sheet']
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwqHgVK04b-Sgeg9QNnrXBEyvrpiw9N0WqcRlYtq2RUK_pHgIYMRJsRfQ-6Vfjrgg_37w/exec'
+  const form = document.forms['submit-to-google-sheet']
   const msg = document.getElementById("msg")
 
-  const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzheSFMlmLCagVOptT7-8imzpyT1kjRwiwuEth1ADtxEWv1e82VelJY2tNoXkY9Sekehg/exec'
+  const scriptURL2 = 'https://script.google.com/macros/s/AKfycbyh65dpDRsRkIHju-MVn5MqyvIRsPdH259VREiC-KOsjTD2i7g0hsyD7yR4nDb-VhlX6A/exec'
   const form2 = document.forms['contact-to-google-sheet']
   const msg2 = document.getElementById("msg2")
  
@@ -610,7 +613,7 @@
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => {
-          msg.innerHTML = "Thank you For Subscribing by Yesid Giron - 70403"
+          msg.innerHTML = "<br />Thank you For Subscribing by 12345 John"
           setTimeout(function(){
               msg.innerHTML = ""
           }, 5000)
@@ -622,7 +625,7 @@
     e.preventDefault()
     fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
       .then(response => {
-          msg2.innerHTML = "Thanks for your contact details by Yesid Giron - 70403"
+          msg2.innerHTML = "Thanks for your contact details by 12345 John"
           setTimeout(function(){
               msg2.innerHTML = "Contact"
           }, 5000)
