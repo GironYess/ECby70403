@@ -12,15 +12,15 @@ h2 {
   }
 
 h2:hover {
-  color:darksalmon; }
+  color:darkolivegreen; }
 
 h1:hover {
-  color:lime }
+  color:lightgreen }
 
 h4 {
   font-size: 19px;
   line-height: 1.375em;
-  color: darkred;
+  color: darkslategray;
   font-weight: 400;
   margin-bottom: 30px;
  }
